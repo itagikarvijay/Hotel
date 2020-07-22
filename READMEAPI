@@ -2,6 +2,13 @@ GIT Url
 -------
 https://github.com/itagikarvijay/Hotel.git
 
+DATABASE
+--------
+
+	Use MySqlDB
+	Database backup is kept in DB folder, you need to restore.
+	
+
 Category API
 ------------
 1.	http://localhost:8181/api/category/categories 
