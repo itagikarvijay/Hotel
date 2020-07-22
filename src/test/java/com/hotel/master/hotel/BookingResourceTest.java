@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hotel.master.product;
+package com.hotel.master.hotel;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
