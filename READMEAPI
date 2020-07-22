@@ -1,0 +1,61 @@
+Category API
+------------
+1.	http://localhost:8181/api/category/categories 
+	: Returns category list (All)
+	
+	
+Rooms API
+---------
+1.	http://localhost:8181/api/room/rooms 
+	: Returns all rooms list
+	
+Booking API
+-----------
+1.	http://localhost:8181/api/booking/bookings
+	: Return all bookings list
+	
+2.	http://localhost:8181/api/booking/bookRoom	
+	: Book a room/rooms
+	
+	inputData = {
+		"arrivalDate":"2020-04-10",
+		"depatureDate":"2020-04-15",
+		"name":"Aaru",
+		"address":"Dadar(W) Mumbai",
+		"telephone":"9988776655",
+		"bookingType":"Direct",
+		"billingInstructions":"By Credit card",
+		"depositAmount":5236.50,
+		"bookingConfirmedBy":"Aaru",
+		"bookingTakenBy":"Staff memeber",
+		"noOfGuest":5,
+		"room":{
+			"id":2,									// Pass id of room from rooms table
+			"status":"Booked"
+		}
+	}
+
+3.	http://localhost:8181/api/booking/checkOutRoom
+	: Checkout room
+
+	inputData = {
+		"id":19,								
+		"depatureDate":"2020-04-25"
+	}
+
+4.	http://localhost:8181/api/booking/checkRoomAvailabilityByDate?fromDate=2020-05-11&toDate=2020-05-12&room=14
+	: Output room is available or not for given dates & room type
+	
+Customer API
+-------------
+
+1.	http://localhost:8181/api/customer/one/{id}
+	: Output Customer booking details
+	
+Test case
+---------
+		Test case for Booking resource is written.
+	
+	
+	
+		
