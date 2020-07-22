@@ -1,0 +1,29 @@
+spring:
+  profiles:    active:    - dev
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true  
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+  devtools:
+    restart:
+      exclude: templates/**
+    livereload:
+      enabled: false
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    timeout: 2m
+  cache:
+    cache-names:    - customersCache, productsCache
+    type: ehcache    ehcache:      config: classpath:masterCache.xml    
+  datasource:    initialization-mode: NEVER
+server:
+    port: 8181
+    servlet:
+      context-path: /       session:        timeout: 2m        cookie:          secure: true          http-only: true
