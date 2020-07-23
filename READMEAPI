@@ -7,7 +7,13 @@ DATABASE
 
 	Use MySqlDB
 	Database backup is kept in DB folder, you need to restore.
+	put your database username & password to connect to database in application-dev.properties
 	
+	
+API: Username & password : 
+-------------------------
+User Name : staff
+password  : pwd123
 
 Category API
 ------------
