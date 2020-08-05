@@ -6,6 +6,8 @@ package com.hotel.master.customer;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
 import com.hotel.booking.BookingDTO;
 import com.hotel.dto.BaseDTO;
 
@@ -17,7 +19,10 @@ public class CustomerDTO extends BaseDTO {
 
 	private Integer id;
 
+	@Size(min=2, max=240)
 	private String name;
+
+	private String address;
 
 	private List<BookingDTO> booking;
 
@@ -70,6 +75,20 @@ public class CustomerDTO extends BaseDTO {
 	 */
 	public void setBooking(List<BookingDTO> booking) {
 		this.booking = booking;
+	}
+
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 }

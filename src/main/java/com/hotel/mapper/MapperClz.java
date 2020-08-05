@@ -16,10 +16,10 @@ import com.hotel.booking.BookingDTO;
 import com.hotel.dto.BaseDTO;
 import com.hotel.entity.BaseEntity;
 import com.hotel.master.category.CategoryDTO;
+import com.hotel.master.customer.Customer;
 import com.hotel.master.customer.CustomerDTO;
 import com.hotel.master.user.User;
 import com.hotel.master.user.UserInfo;
-import com.hotel.rooms.Rooms;
 import com.hotel.rooms.RoomsDTO;
 
 /**
@@ -88,6 +88,10 @@ public class MapperClz<R> {
 
 		if (dto.getClass().getName().equals("com.hotel.booking.BookingDTO")) {
 			return ((T) modelMapper.map(dto, Booking.class));
+		}
+		
+		if (dto.getClass().getName().equals("com.hotel.master.customer.CustomerDTO")) {
+			return ((T) modelMapper.map(dto, Customer.class));
 		}
 		return null;
 	}

@@ -16,7 +16,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
-
 import com.hotel.master.role.Role;
 import com.hotel.master.user.IUserRepo;
 import com.hotel.master.user.User;
@@ -51,9 +50,8 @@ public class AuthManager implements AuthenticationProvider {
 //			 throw new BadCredentialsException("Wrong password");
 //		 }
 
-		return new UsernamePasswordAuthenticationToken(
-				new org.springframework.security.core.userdetails.User(username, password, getAuthorities(user)),
-				password, getAuthorities(user));
+//		return new UsernamePasswordAuthenticationToken(new org.springframework.security.core.userdetails.User(username, password, getAuthorities(user)),password, getAuthorities(user));
+		return new UsernamePasswordAuthenticationToken(new org.springframework.security.core.userdetails.User(username,	password, true, true, true, true, getAuthorities(user)),password, getAuthorities(user));
 	}
 
 	@Override

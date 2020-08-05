@@ -59,4 +59,9 @@ public class CustomerServiceImpl implements ICustomerService {
 		return customerDTO;
 	}
 
+	@Override
+	public void createCustomer(CustomerDTO customer) {
+		customerRepo.save(mapperClz.convertToEntity(customer));
+	}
+
 }

@@ -39,6 +39,9 @@ public class Customer extends BaseEntity {
 	@Column(name = "name")
 	private String name;
 	
+	@Column(name="address")
+	private String address;
+	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="customer") 
 	private List<Booking> booking;
 
@@ -86,6 +89,20 @@ public class Customer extends BaseEntity {
 	 */
 	public void setBooking(List<Booking> booking) {
 		this.booking = booking;
+	}
+	
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	@Override

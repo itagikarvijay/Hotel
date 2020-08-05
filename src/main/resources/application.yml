@@ -1,5 +1,7 @@
 spring:
-  profiles:    active:    - dev
+  profiles:
+    active:
+    - dev
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -17,13 +19,18 @@ spring:
   session:
     store-type: jdbc
     jdbc:
-      initialize-schema: always
-    timeout: 2m
+      initialize-schema: never
+    timeout: 5m
   cache:
-    cache-names:    - customersCache, productsCache
-    type: ehcache    ehcache:      config: classpath:masterCache.xml    
-  datasource:    initialization-mode: NEVER
-server:
+    cache-names:
+    - customersCache, productsCache
+    type: ehcache
+    ehcache:
+      config: classpath:masterCache.xml    
+  datasource:
+    initialization-mode: NEVER
+
+server:
     port: 8181
     servlet:
-      context-path: /       session:        timeout: 2m        cookie:          secure: true          http-only: true
+      context-path: /

@@ -14,6 +14,8 @@ public interface ICustomerService {
 
 	
 	BaseDTO getOne(Integer id);
+	
+	void createCustomer(CustomerDTO customer);
 
 
 }
